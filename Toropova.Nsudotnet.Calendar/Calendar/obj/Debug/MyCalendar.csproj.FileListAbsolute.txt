@@ -1,0 +1,6 @@
+c:\users\toropova\documents\visual studio 2013\Projects\Calendar\Calendar\bin\Debug\Calendar.exe.config
+c:\users\toropova\documents\visual studio 2013\Projects\Calendar\Calendar\bin\Debug\Calendar.exe
+c:\users\toropova\documents\visual studio 2013\Projects\Calendar\Calendar\bin\Debug\Calendar.pdb
+c:\users\toropova\documents\visual studio 2013\Projects\Calendar\Calendar\obj\Debug\MyCalendar.csprojResolveAssemblyReference.cache
+c:\users\toropova\documents\visual studio 2013\Projects\Calendar\Calendar\obj\Debug\Calendar.exe
+c:\users\toropova\documents\visual studio 2013\Projects\Calendar\Calendar\obj\Debug\Calendar.pdb
