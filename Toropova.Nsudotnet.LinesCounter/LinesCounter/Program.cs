@@ -14,32 +14,32 @@ namespace LinesCounter
 			int count = 0;
 			if (Directory.Exists(dirName))
 			{
-				count = exploreDirectory (dirName,extension);
+				count = ExploreDirectory (dirName,extension);
 				Console.WriteLine ("Line counts:" + count.ToString ());
 			}
 
 
 		}
-		public static int exploreDirectory(String dirName, String extension)
+		public static int ExploreDirectory(String dirName, String extension)
 		{
 			int n = 0;
 			string[] dirs = Directory.GetDirectories(dirName);
 			foreach (string s in dirs)
 			{
-				n = n + exploreDirectory (s,extension);
+				n = n + ExploreDirectory (s,extension);
 			}
 			string[] files = Directory.GetFiles(dirName);
 			foreach (string s in files)
 			{
-				if (Path.GetExtension(s).Equals (extension)) {
-					n = n + exploreFile (s);
+				if (Path.GetExtension(s).Equals(extension,StringComparison.Ordinal)) {
+					n = n + ExploreFile (s);
 					//Console.WriteLine (s);
 				}
 
 			}
 			return n;
 		}
-		public static int exploreFile(String fileName)
+		public static int ExploreFile(String fileName)
 		{
 			int i=0;
 			try 
@@ -47,18 +47,18 @@ namespace LinesCounter
 				using (StreamReader sr = new StreamReader(fileName)) 
 				{
 					String line;
-					String temp=null;
 					while ((line = sr.ReadLine()) != null) 
 					{
 						line.Trim();
-						if (line.StartsWith("/*"))
+						if (line.Contains("/*"))
 						{
-							line = "";
-							while (((temp = sr.ReadLine()) != null)&&(!temp.Contains("*/")))
+							if (!line.StartsWith("/*"))
+								i++;
+							while ((line!=null)&&(!line.Contains("*/")))
 							{
-
-		
+								line = sr.ReadLine();
 							}
+							line = "";
 						}
 						if((line.Length!=0)&&(!line.StartsWith("//")))
 						{
