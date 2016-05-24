@@ -1,1 +1,0 @@
-c:\users\toropova\documents\visual studio 2013\Projects\Calendar\Calendar\bin\Debug\Calendar.exe.config

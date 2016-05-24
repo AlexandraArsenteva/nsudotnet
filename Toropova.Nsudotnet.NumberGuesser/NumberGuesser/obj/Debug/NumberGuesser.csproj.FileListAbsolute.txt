@@ -1,6 +1,0 @@
-c:\users\natalia\documents\visual studio 2013\Projects\NumberGuesser\NumberGuesser\bin\Debug\NumberGuesser.exe.config
-c:\users\natalia\documents\visual studio 2013\Projects\NumberGuesser\NumberGuesser\bin\Debug\NumberGuesser.exe
-c:\users\natalia\documents\visual studio 2013\Projects\NumberGuesser\NumberGuesser\bin\Debug\NumberGuesser.pdb
-c:\users\natalia\documents\visual studio 2013\Projects\NumberGuesser\NumberGuesser\obj\Debug\NumberGuesser.csprojResolveAssemblyReference.cache
-c:\users\natalia\documents\visual studio 2013\Projects\NumberGuesser\NumberGuesser\obj\Debug\NumberGuesser.exe
-c:\users\natalia\documents\visual studio 2013\Projects\NumberGuesser\NumberGuesser\obj\Debug\NumberGuesser.pdb

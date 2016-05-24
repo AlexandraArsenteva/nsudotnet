@@ -20,7 +20,6 @@ namespace MyCalendar
 				int month = dateValue.Month;
 				int year = dateValue.Year;
 				int daysInMonth = DateTime.DaysInMonth(year, month);
-				object[] daysOfWeek = new object[]{DayOfWeek.Monday, DayOfWeek.Tuesday, DayOfWeek.Wednesday, DayOfWeek.Thursday,DayOfWeek.Friday,DayOfWeek.Saturday, DayOfWeek.Sunday};
 				DateTime date1 = new DateTime(year, month, 1);
 
 				DateTime now = DateTime.Now;
@@ -41,12 +40,14 @@ namespace MyCalendar
 				Console.WriteLine();
 
 				int holidays = 0;
-				int d = Array.IndexOf(daysOfWeek, date1.DayOfWeek);
-				for (int i = 0; i < d; i++)
+				int d = (int)date1.DayOfWeek;
+				for (int i = 0; i <(d+6)%7; i++)
 					Console.Write("     ");
 				for (int i = 1; i <= daysInMonth; i++)
 				{
-					if (((i+d)%7==0)||((i+d+1)%7==0))
+					Console.BackgroundColor = ConsoleColor.Black;
+					Console.ForegroundColor = ConsoleColor.Gray;
+					if (((i+d)%7==1)||((i+d+1)%7==1))
 					{
 						Console.BackgroundColor = ConsoleColor.Red;
 						Console.ForegroundColor = ConsoleColor.Black;
@@ -65,7 +66,7 @@ namespace MyCalendar
 					Console.Write(" {0,3} ", i);
 					Console.BackgroundColor = ConsoleColor.Black;
 					Console.ForegroundColor = ConsoleColor.Gray;
-					if (((i + d) % 7 == 0) || (i == daysInMonth)) Console.WriteLine();
+					if (((i + d) % 7 == 1) || (i == daysInMonth)) Console.WriteLine();
 				}
 				Console.WriteLine("Число рабочих дней: {0}", daysInMonth - holidays);
 

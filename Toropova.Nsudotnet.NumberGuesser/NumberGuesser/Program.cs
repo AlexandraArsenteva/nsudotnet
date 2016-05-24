@@ -34,7 +34,7 @@ namespace NumGes
 					Console.WriteLine("Congratulations! You win!");
 					DateTime end = DateTime.Now;
 					TimeSpan rez = end - begin;
-					Console.WriteLine("Time: {0} min {1} sec", rez.Minutes, rez.Seconds);
+					Console.WriteLine("Time: {0} min", rez.TotalMinutes);
 					Console.WriteLine("Number of retries: {0}", i);
 					for (int j = 1; j <= i;j++)
 					{
