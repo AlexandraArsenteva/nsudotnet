@@ -1,0 +1,16 @@
+﻿<Properties>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|x86" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Toropova.Nsudotnet.Rss2Email/Program.cs">
+    <Files>
+      <File FileName="Toropova.Nsudotnet.Rss2Email/Program.cs" Line="11" Column="83" />
+      <File FileName="Toropova.Nsudotnet.Rss2Email/SMTPUtils.cs" Line="25" Column="4" />
+      <File FileName="Toropova.Nsudotnet.Rss2Email/XMLUtils.cs" Line="2" Column="34" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore>
+      <Breakpoint file="/home/alexandra/Desktop/c#/Toropova.Nsudotnet.Rss2Email/Toropova.Nsudotnet.Rss2Email/Program.cs" line="8" column="1" />
+    </BreakpointStore>
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+</Properties>

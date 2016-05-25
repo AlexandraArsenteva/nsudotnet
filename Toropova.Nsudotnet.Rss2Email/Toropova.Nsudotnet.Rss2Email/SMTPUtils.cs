@@ -19,6 +19,9 @@ namespace Toropova.Nsudotnet.Rss2Email
 			client.EnableSsl = true;
 
 			client.Send(message);
+
+			message.Dispose ();
+			client.Dispose ();
 		}
 		public SMTPUtils ()
 		{
