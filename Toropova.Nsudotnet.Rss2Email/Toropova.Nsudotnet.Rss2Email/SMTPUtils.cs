@@ -10,18 +10,17 @@ namespace Toropova.Nsudotnet.Rss2Email
 	{
 		public static void Send(string server, string to, string from, string password, string subject, string body)
 		{
-			MailMessage message = new MailMessage(from, to);
-			message.Subject = subject;
-			message.Body = body;
-			SmtpClient client = new SmtpClient();
-			client.Host = server;
-			client.Credentials = new System.Net.NetworkCredential(from, password);
-			client.EnableSsl = true;
+			using (MailMessage message = new MailMessage(from, to)) {
+				message.Subject = subject;
+				message.Body = body;
+				using (SmtpClient client = new SmtpClient()) {
+					client.Host = server;
+					client.Credentials = new System.Net.NetworkCredential (from, password);
+					client.EnableSsl = true;
+					client.Send (message);
+				}
+			}
 
-			client.Send(message);
-
-			message.Dispose ();
-			client.Dispose ();
 		}
 		public SMTPUtils ()
 		{

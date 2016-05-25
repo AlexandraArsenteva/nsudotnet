@@ -32,12 +32,12 @@ namespace Toropova.Nsudotnet.Rss2Email
 
 		private void StartSendRssToEmail()
 		{
-			Timer timer = new Timer();
-			timer.Elapsed += new ElapsedEventHandler(OnTimedEvent);
-			timer.Interval = 1000 * 60;
-			timer.Enabled = true;
-
-			Console.ReadLine();
+			using (Timer timer = new Timer()) {
+				timer.Elapsed += new ElapsedEventHandler (OnTimedEvent);
+				timer.Interval = 1000 * 60;
+				timer.Enabled = true;
+				Console.ReadLine ();
+			}
 		}
 
 		private void OnTimedEvent(object source, ElapsedEventArgs e)
